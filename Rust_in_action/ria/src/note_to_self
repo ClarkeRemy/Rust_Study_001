@@ -1,0 +1,35 @@
+ascii alt
+
+\ : alt 92
+_ : alt 95
+
+
+
+macro_rules! println_all {
+    ($(($($args:expr),+ $(,)?))* ) => {
+        $( println!($($args,)+); )*
+    };
+}
+fn main() {
+    println_all!(
+        ("foo")
+        ("{}, {}", 1, 2)
+    );
+}
+
+
+macro_rules! derive_def_struct {
+	    (#:$drv:tt  $( | $p:vis    $make_type:ident 
+
+$(   {  $($f1:ident : $typ1:ty,)*  }   )?
+$( $((  $($tup1:ty,            )*  ))?;)?  )*)
+
+=> {$(#[derive$drv]   $p struct $make_type       
+
+$(   {  $($f1       : $typ1   ,)*  }   )?
+$( $((  $($tup1,               )*  ))?;)?  )*};
+}
+
+example:
+
+derive_def_struct!( #:(Debug) | Dwarf {} | Elf {} | Human {} );

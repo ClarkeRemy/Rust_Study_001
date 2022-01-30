@@ -1,0 +1,24 @@
+[package]
+name = "ria"
+version = "0.1.0"
+authors = ["Remy"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num = "*"
+regex="1"
+clap="2"
+piston_window = "0.117"
+piston2d-graphics="0.39"
+rand="0.8"
+# Windows
+winapi="0.2"
+kernel32-sys="0.2"
+# serde
+bincode = "1"
+serde = "1"
+serde_cbor = "0.8"
+serde_derive = "1"
+serde_json = "1"
