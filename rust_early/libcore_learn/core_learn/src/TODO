@@ -1,0 +1,4 @@
+check rustc_builtin_macro and intrinsics
+
+continue src/fmt/mod.rs
+was_open: cell.rs marker.rs
