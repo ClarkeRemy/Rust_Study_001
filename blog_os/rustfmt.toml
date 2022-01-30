@@ -1,0 +1,4 @@
+brace_style = "PreferSameLine"
+# fn_single_line = "true"
+ # hard_tabs = "true"
+tab_spaces = 1
